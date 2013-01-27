@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple blog</title>
+	<meta charset="utf-8">
+	
+	<script src="../lib/jquery.min.js" type="text/javascript"></script>
+	<script src="../blog.js" type="text/javascript"></script>
+	<link href="../style.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div class="title">Add article</div>
+		<div class="add-article">
+			<form class="well" method="POST" action="/addNewArticle">
+			  <fieldset>
+				<label>Title</label>
+				<input name="title" value=""/>
+			  </fieldset>
+			  <fieldset>
+				<label>Body</label>
+				<textarea name="body"></textarea>
+			  </fieldset>
+			  <fieldset>
+				<input type="submit" value="Save" />
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

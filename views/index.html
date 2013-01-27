@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple blog</title>
+	<meta charset="utf-8">
+	
+	<script src="lib/jquery.min.js" type="text/javascript"></script>
+	<script src="blog.js" type="text/javascript"></script>
+	<link href="style.css" rel="stylesheet" />
+
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			<a href="/"><%= title %></a>
+		</div>
+		<a class="add-new" href="/add/article">add new article</a>
+		<div class="articles">
+			<% locals.articles.forEach(function(article){ %>
+			<div class="article">
+				<div class="title">
+					<a href="/article/<%= article._id %>">
+						<%= article.title %>
+					</a>
+				</div>
+				<div class="body"><%= article.body %></div>
+				<div class="comments"><%= article.comments %></div>
+			</div>
+			<% }) %>
+		</div>
+	</div>
+</body>
+</html>
